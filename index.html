@@ -7,6 +7,9 @@
     <title>home page</title>
 </head>
 <body>
+    
+    <!-- Home-Section -->
+
     <section class="home-section" id="section1">
         <!-- navbar -->
         <div class="navdiv">
@@ -14,7 +17,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#section2">Works</a></li>
                 <li><a href="#section3">Social</a></li>
-                <li><a href="https://www.linkedin.com/in/amit-ranjan-das/" target="_blank">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/amit-ranjan-das/" target="_blank">Connect</a></li>
             </ul>
             <button id="resume"><a href="./assets/AmitRanjanDas_resume.pdf" target="_blank">my resume</a></button>
         </div>
@@ -24,14 +27,17 @@
             <p id="head1">NAMASTE ALIENS!!</p>
             <p id="head2">my name is</p>
             <p id="head3">Amit Ranjan Das</p>
-            <p id="head4">I'M A PROGRAMMER</p>
+            <p id="head4">I'M A <span id="animatedText" data-text="Programmer"> Programmer...</span></p>
         </div>
-            <p id="quote">It is not the strongest of the species that survives, nor the most intelligent ones. 
-            It is the one that is the most adaptable to change</p>
+            <p id="quote">"It is not the strongest of the species that survives, nor the most intelligent ones. 
+            It is the one that is the most adaptable to change"
+            ~ Charles Darwin</p>
 
         <img src="./assets/pic1.png" alt="" id="pic1">
         <!-- <img src="./assets/pic2.png" alt="" id="pic2"> -->
     </section>
+
+    <!-- Project-Section -->
 
     <section class="work-section" id="section2">
         <div class="workspace-nav">
@@ -43,18 +49,89 @@
             <div class="static">
                 <h3>MINI PROJECTS</h3>
             </div>
-            <div class="dynamic"></div>
+            <div class="dynamic">
+                <div class="project">
+                    <a href="URL_TO_WEATHER_PROJECT" target="_blank">
+                        <img src="./assets/mini/weather.png" alt="Weather Project">
+                        <div class="overlay">Weather Project</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="URL_TO_TODO_PROJECT" target="_blank">
+                        <img src="./assets/mini/todo.png" alt="Todo Project">
+                        <div class="overlay">TO-DO Project</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="URL_TO_TYPING_PROJECT" target="_blank">
+                        <img src="./assets/mini/typing.png" alt="Typing Project">
+                        <div class="overlay">Typing Project</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="URL_TO_MORSE_PROJECT" target="_blank">
+                        <img src="./assets/mini/morse.png" alt="Morse Code Project">
+                        <div class="overlay">Morse generator Project</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="URL_TO_CALCULATOR_PROJECT" target="_blank">
+                        <img src="./assets/mini/calculator.png" alt="Calculator Project">
+                        <div class="overlay">Calculator Project</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="URL_TO_QR_PROJECT" target="_blank">
+                        <img src="./assets/mini/QR.png" alt="QR Code Project">
+                        <div class="overlay">QR Project</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="URL_TO_EMAIL_PROJECT" target="_blank">
+                        <img src="./assets/mini/email.png" alt="Email Project">
+                        <div class="overlay">Email Project</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="URL_TO_PASSWORD_PROJECT" target="_blank">
+                        <img src="./assets/mini/password.png" alt="Password Project">
+                        <div class="overlay">Password Project</div>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="mega">
             <div class="static">
                 <h3>MEGA PROJECTS</h3>
             </div>
-            <div class="dynamic"></div>
+            <div class="dynamic">
+                <div class="project">
+                    <a href="URL_TO_WEATHER_PROJECT" target="_blank">
+                        <img src="./assets/mega/sentiment.png" alt="NLP Project">
+                        <div class="overlay">NLP Project</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="URL_TO_TODO_PROJECT" target="_blank">
+                        <img src="./assets/mega/attendance.png" alt="AMS Project">
+                        <div class="overlay">AMS Project</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="URL_TO_TYPING_PROJECT" target="_blank">
+                        <img src="./assets/mega/hms.png" alt="HMS Project">
+                        <div class="overlay">HMS Project</div>
+                    </a>
+                </div>
+                
+            </div>
         </div>
 
 
     </section>
+
+    <!-- social-secction -->
 
     <section class="social-secction" id="section3">
         <div class="container">
@@ -83,6 +160,6 @@
         </div>
         
     </section>
-
+    <script src="script.js"></script>
 </body>
 </html>

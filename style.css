@@ -23,7 +23,7 @@ section{
     background: #fffefe;
     border: 2px solid;
     font-family: sans-serif;
-    padding: 20px 37.5px 20px 0px;
+    padding: 10px 37.5px 10px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,7 +42,7 @@ li{
 
 li a{
     color: black;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
     margin-left: 40px;
     cursor: pointer;
@@ -90,9 +90,47 @@ button a{
 }
 
 #head4{
+    display: flex;
+    align-items: center;
     font-size: 36px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+#animatedText {
+    position: relative;
+    font-size: 44px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    -webkit-text-stroke: 0.5vw #ffffff;
+    text-transform: uppercase;
+    overflow: hidden; /* Ensure no overflow */
+    display: inline-block; /* Ensure h3 only takes up as much space as its content */
+    margin-left: 10px;
+}
+
+#animatedText::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set to 100% to match text width */
+    color: #000000;
+    -webkit-text-stroke: 0vw #ffffff;
+    border-right: 1px solid #000000; /* Vertical line */
+    overflow: hidden; /* Ensure no overflow */
+    animation: animate 3s linear infinite; /* Animation */
+}
+
+@keyframes animate {
+    0%, 10%, 100% {
+        width: 0; /* Start and end with no width */
+    }
+    70%, 90% {
+        width: 100%; /* Full width at these keyframes */
+    }
+}
+
+
 
 #pic1{
     position: absolute; /* Use absolute positioning */
@@ -143,6 +181,8 @@ button a{
     border: 2px solid #8d8b8b;
     border-radius: 5px;
     background-color: #171717;
+    display: flex;
+    flex-direction: row;
 }
 
 .mega{
@@ -154,6 +194,8 @@ button a{
     border: 2px solid #8d8b8b;
     border-radius: 5px;
     background-color: #171717;
+    display: flex;
+    flex-direction: row;
 }
 
 .static{
@@ -161,7 +203,7 @@ button a{
     border-radius: 5px;
     width: 140px;
     height: 187px;
-    background-color: #fff;
+    background-color: orange;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,6 +216,67 @@ h3{
     margin: 2px;
 
 }
+
+.dynamic {
+    width: 1280px;
+    position: relative;
+    height: 187px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+
+    /* Hide scrollbar for Chrome, Safari, and Edge */
+    scrollbar-width: none;           /* Firefox */
+    -ms-overflow-style: none;        /* IE 10+ */
+}
+
+.project {
+    position: relative; /* Ensure overlay is positioned relative to project */
+}
+
+.dynamic img {
+    height: 180px;
+    width: 180px;
+    margin: 5px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.dynamic img:hover {
+    transform: scale(1.05);   /* Slight zoom on hover */
+}
+
+.dynamic::-webkit-scrollbar {
+    display: none;                   /* Chrome, Safari, Edge */
+}
+
+.overlay {
+    position: absolute; /* Positioning for overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.project:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+
 
 
 /* ABOUT SECTION  */
@@ -204,8 +307,8 @@ h3{
 }
 
 #profile{
-    height: 160px;
-    width: 145px;
+    height: 156px;
+    width: 144px;
     border: 4px solid rgb(201, 224, 201);
     border-radius: 50%;
     margin: 20px;
